@@ -3,7 +3,9 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main
+      - rama1
+
+
 
 jobs:
   build-and-push:
@@ -29,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        instance: ["HOST_DNS1", "HOST_DNS2"]  # Instancias EC2
+        instance: ["HOST_DNS3", "HOST_DNS4"]  # Instancias EC2
 
     steps:
       - name: Trigger redeploy on EC2
