@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t fernanyag20/js-proyect . 
+        run: docker build -t fernanyag20/js-proyect 
 
       - name: Push Docker image to DockerHub
         run: docker push fernanyag20/js-proyect:latest
