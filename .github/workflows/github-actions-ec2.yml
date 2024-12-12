@@ -3,7 +3,9 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - qa
+      - rama1
+
+
 
 jobs:
   build-and-push:
@@ -19,7 +21,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t fernanyag20/js-proyect . 
+        run: docker build -t fernanyag20/js-proyect .
 
       - name: Push Docker image to DockerHub
         run: docker push fernanyag20/js-proyect:latest
